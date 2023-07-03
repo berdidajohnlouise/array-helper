@@ -1,0 +1,26 @@
+{
+    "name": "berdidajohnlouise/array-helper",
+    "description": "A convenient way use arrays in php.",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "8.5.x-dev"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Berdidajohnlouise\\ArrayHelper\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Berdidajohnlouise\\ArrayHelper\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "John Louise Berdida"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

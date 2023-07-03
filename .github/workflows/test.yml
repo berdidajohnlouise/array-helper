@@ -1,0 +1,25 @@
+on:
+  push:
+    branches:
+      - main
+
+name: Array Helper Test
+
+jobs:
+  phpunit:
+    runs-on: ubuntu-latest
+    container:
+      image: kirschbaumdevelopment/laravel-test-runner:7.4
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+
+      - name: Install composer dependencies
+        run: |
+          composer install
+
+      - name: Run Laravel Test Suite
+        run: |
+          vendor/bin/phpunit tests
