@@ -1,3 +1,7 @@
+[![Array Helper Test](https://github.com/berdidajohnlouise/array-helper/actions/workflows/test.yml/badge.svg)](https://github.com/berdidajohnlouise/array-helper/actions/workflows/test.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/berdidajohnlouise/array-helper/blob/main/LICENSE) 
+
+
 # ArrayHelper - Simplify Array Operations in PHP.
 
 ArrayHelper is a powerful PHP package that provides a collection of functions to simplify common array operations, making array manipulation a breeze. 
@@ -74,6 +78,46 @@ You can install the ArrayHelper package via Composer. Run the following command 
 
 ```
 
+### Array merge()
+- Merge multiple arrays into a single array, combining their elements.
+
+```php
+    /**
+     * Method merge arrays helper function
+     *
+     * @param ...$arrays $arrays [can accept multiple param arrays]
+     *
+     * @return array
+     */
+
+    $array1 = ['name' => 'John', 'age' => 30];
+    $array2 = ['city' => 'New York', 'country' => 'USA'];
+    $array3 = ['occupation' => 'Developer'];
+
+    // Without instantiating of array in constructor
+    $arrayHelpers = new ArrayHelper;
+    $mergedArray = $arrayHelpers->merge($array1, $array2, $array3);
+    // Output = [
+    //    'name' => 'John',
+    //    'age' => 30,
+    //    'city' => 'New York',
+    //    'country' => 'USA',
+    //    'occupation' => 'Developer',
+    // ]
+
+    // instantiating of array in constructor
+    $arrayHelpers = new ArrayHelper($array1);
+    $mergedArray = $arrayHelpers->merge($array2, $array3);
+    // Output = [
+    //    'name' => 'John',
+    //    'age' => 30,
+    //    'city' => 'New York',
+    //    'country' => 'USA',
+    //    'occupation' => 'Developer',
+    // ]
+
+```
+
 ### Array get()
 - Retrieve values from arrays using keys or complex paths.
 ```php
@@ -119,45 +163,7 @@ You can install the ArrayHelper package via Composer. Run the following command 
 
 ```
 
-### Array merge()
-- Merge multiple arrays into a single array, combining their elements.
 
-```php
-    /**
-     * Method merge arrays helper function
-     *
-     * @param ...$arrays $arrays [can accept multiple param arrays]
-     *
-     * @return array
-     */
-
-    $array1 = ['name' => 'John', 'age' => 30];
-    $array2 = ['city' => 'New York', 'country' => 'USA'];
-    $array3 = ['occupation' => 'Developer'];
-
-    // Without instantiating of array in constructor
-    $arrayHelpers = new ArrayHelper;
-    $mergedArray = $arrayHelpers->merge($array1, $array2, $array3);
-    // Output = [
-    //    'name' => 'John',
-    //    'age' => 30,
-    //    'city' => 'New York',
-    //    'country' => 'USA',
-    //    'occupation' => 'Developer',
-    // ]
-
-    // instantiating of array in constructor
-    $arrayHelpers = new ArrayHelper($array1);
-    $mergedArray = $arrayHelpers->merge($array2, $array3);
-    // Output = [
-    //    'name' => 'John',
-    //    'age' => 30,
-    //    'city' => 'New York',
-    //    'country' => 'USA',
-    //    'occupation' => 'Developer',
-    // ]
-
-```
 
 ## Contributing
 Contributions are welcome! If you find a bug or want to add new features, please submit an issue or a pull request on the GitHub repository.
