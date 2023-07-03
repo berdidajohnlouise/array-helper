@@ -28,7 +28,7 @@ You can install the ArrayHelper package via Composer. Run the following command 
 ### ArrayHelper sort()
 - Easily sort arrays based on properties or values in both ascending and descending order.
 ```php
-    use Berdidajohnlouise\ArrayHelper;
+    use Berdidajohnlouise\ArrayHelper\ArrayHelper;
 
     /**
      * Method sorting arrays by associative or indexed array
@@ -82,6 +82,7 @@ You can install the ArrayHelper package via Composer. Run the following command 
 - Merge multiple arrays into a single array, combining their elements.
 
 ```php
+    use Berdidajohnlouise\ArrayHelper\ArrayHelper;
     /**
      * Method merge arrays helper function
      *
@@ -121,7 +122,7 @@ You can install the ArrayHelper package via Composer. Run the following command 
 ### Array get()
 - Retrieve values from arrays using keys or complex paths.
 ```php
-    use Berdidajohnlouise\ArrayHelper;
+    use Berdidajohnlouise\ArrayHelper\ArrayHelper;
     /**
     * Method get for retrieving a value from an array using a dot-separated key or direct array key. 
     *
@@ -144,7 +145,7 @@ You can install the ArrayHelper package via Composer. Run the following command 
 - Determine if an array contains a specific key or value.
 
 ```php
-    use Berdidajohnlouise\ArrayHelper;
+    use Berdidajohnlouise\ArrayHelper\ArrayHelper;
     /**
     * Method has that checks an array if has a certain key.
     *
