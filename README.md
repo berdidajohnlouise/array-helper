@@ -68,7 +68,7 @@ You can install the ArrayHelper package via Composer. Run the following command 
     //        ['name' => 'Bob', 'age' => 35],
     // ]
 
-    // Sort Associative array order by ascending default
+    // Sort Associative array order by descending
     $sortedArrayAsc = $arrayHelper->sort('age',false);
     // Output = [
     //        ['name' => 'Bob', 'age' => 35],
